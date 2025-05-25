@@ -1,4 +1,5 @@
-## 📦 Installation Guide 此脚本已经在ubuntu20.04和22.04上测试通过
+## 因为服务器没有界面，此脚本是为ubuntu服务器安装远程桌面，然后使用vnc连接，此脚本已经在ubuntu20.04和22.04上测试通过
+## 📦 Installation Guide 
 
 ## 一，安装桌面
 直接执行install.sh 
