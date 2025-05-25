@@ -1,13 +1,19 @@
-二、安装并配置 TightVNC 服务器
+## 一，安装桌面
+直接执行install.sh 
+
+  bash install.sh
+
+## 二、安装并配置 TightVNC 服务器
+
 安装 TightVNC Server：
 
-bash
-Copy
-Edit
-sudo apt install tightvncserver -y
-DigitalOcean
+  bash
+  Copy
+  Edit
+  sudo apt install tightvncserver -y
 
-初次运行并设置 VNC 访问密码：
+
+### 初次运行并设置 VNC 访问密码：
 
 bash
 Copy
