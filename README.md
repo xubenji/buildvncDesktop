@@ -1,4 +1,5 @@
-## 因为服务器没有界面，此脚本是为ubuntu服务器安装远程桌面，然后使用vnc连接，此脚本已经在ubuntu20.04和22.04上测试通过
+## 因为服务器没有界面，此脚本是为ubuntu服务器安装远程桌面，然后使用vnc连接，
+### 此脚本已经在ubuntu20.04和22.04上测试通过
 ## 📦 Installation Guide 
 
 ## 一，安装桌面
@@ -13,16 +14,10 @@
 
 安装 TightVNC Server：
 
-    bash
-    Copy
-    Edit
     sudo apt install tightvncserver -y
 
 初次运行并设置 VNC 访问密码：
 
-    bash
-    Copy
-    Edit
     vncserver :1
 系统会提示输入并确认 6–8 位 VNC 密码。 
 在提示是否要创建view-only的密码时选择否
