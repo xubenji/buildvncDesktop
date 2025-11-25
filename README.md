@@ -38,9 +38,9 @@
 
     chmod +x ~/.vnc/xstartup
 
-重启 VNC 会话，绑定到本机接口：
+绑定到指定接口比如
 
-    vncserver -localhost :1
+    vncserver :1 
 
 ### 三，连接vnc服务器桌面
 
