@@ -8,5 +8,4 @@ sudo apt install --no-install-recommends \
 sudo apt install --no-install-recommends lightdm lightdm-gtk-greeter -y
 sudo apt purge gdm3 gnome-shell -y
 sudo apt autoremove --purge -y
-sudo reboot
 
