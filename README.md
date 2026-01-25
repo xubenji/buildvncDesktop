@@ -112,18 +112,18 @@ Windows：
 ### 四，远程桌面图标，任务栏显示慢的问题解决办法
 
 连接远程桌面以后可能会发现桌面的图标加载缓慢，这是由于
-user1 从来没有经历过 systemd 的“真实登录会话”
+user1 从来没有经历过 systemd 的“真实登录会话”。   
 （login / ssh / display-manager）
-现在所有的操作，都是在 su 派生的“假用户会话”里。
-在这种情况下：
-systemd 不会 自动创建 /run/user/1000
-dbus / polkit / dconf / gvfs / pulseaudio
-👉 全部失去“运行时根目录”
-XFCE 只能一边报错、一边 fallback
-👉 表现就是：慢、延迟、polkit 报错
-    RealVNC Connect 
-    MobaXterm 
-如果你执行下面的命令会得到如下结果：
+现在所有的操作，都是在 su 派生的“假用户会话”里。    
+在这种情况下：    
+systemd 不会 自动创建 /run/user/1000    
+dbus / polkit / dconf / gvfs / pulseaudio    
+👉 全部失去“运行时根目录”    
+XFCE 只能一边报错、一边 fallback   
+👉 表现就是：慢、延迟、polkit 报错   
+    RealVNC Connect    
+    MobaXterm    
+如果你执行下面的命令会得到如下结果：  
 
     user1@localhost:~$ echo $XDG_RUNTIME_DIR
     
@@ -149,6 +149,14 @@ XFCE 只能一边报错、一边 fallback
     /run/user/1000
     user1@localhost:~$ ls -ld /run/user/1000
     drwx------ 6 user1 user1 220 Jan 25 02:49 /run/user/1000
+
+杀死原桌面：
+
+    vncserver -kill :1
+
+然后再启动：
+
+    vncserver :1 -geometry 1920x1080
 
 ### 五，安装火狐浏览器
 
