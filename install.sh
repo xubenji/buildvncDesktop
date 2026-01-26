@@ -3,4 +3,5 @@ sudo apt install --no-install-recommends lxde-core lxsession lxsession-logout lx
 sudo apt install --no-install-recommends lightdm lightdm-gtk-greeter -y
 sudo apt purge gdm3 gnome-shell -y
 sudo apt autoremove --purge -y
+sudo apt install tightvncserver -y 
 
