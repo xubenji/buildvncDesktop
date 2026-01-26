@@ -4,4 +4,4 @@ sudo apt install --no-install-recommends lightdm lightdm-gtk-greeter -y
 sudo apt purge gdm3 gnome-shell -y
 sudo apt autoremove --purge -y
 sudo apt install tightvncserver -y 
-
+sudo apt install -y xfce4 xfce4-goodies dbus-x11
