@@ -13,15 +13,17 @@
 
     reboot
     
-## 二、安装并配置 TightVNC 服务器
-
-安装 TightVNC Server：
-
-    sudo apt install tightvncserver -y
-
-安装XFCE
-
-    sudo apt install -y xfce4 xfce4-goodies dbus-x11
+## 二、配置 TightVNC 服务器
+    !自动创建用户和用户桌面你可以直接执行  
+    
+        bash create_users.sh
+    
+    !然后执行
+    
+        bash create_vnc_users.sh
+    
+    !创建用户和桌面的自动化脚本会自动创建十个user1～10的用户，然后创建对应的十个桌面。  
+    !如果你想自行创建可以不使用这个脚本。  
 
 添加用户，此处用户名为user1
 
@@ -167,7 +169,12 @@ Snap 版 Firefox无法正确启动，因为此桌面为精简版，缺少firefox
     sudo apt update
     sudo apt install firefox-esr
 
-安装完成以后，在服务器的轻量化桌面上启动terminal，然后运行firefox-esr 
+安装完成以后，在服务器的轻量化桌面上启动terminal，然后运行firefox-esr   
+也可以直接执行
+
+    bash install_firefox_esr.sh
+
+
 
 
 
