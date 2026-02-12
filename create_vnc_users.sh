@@ -3,7 +3,7 @@ set -euo pipefail
 
 USERS_FILE="${USERS_FILE:-./users}"
 START_DISPLAY="${START_DISPLAY:-1}"            # 从 :1 开始
-GEOMETRY="${GEOMETRY:-1920x1080}"             # 分辨率
+GEOMETRY="${GEOMETRY:-1440x900}"             # 分辨率
 DEPTH="${DEPTH:-24}"                          # 色深
 KILL_EXISTING="${KILL_EXISTING:-0}"           # 1=如果display已存在就先kill再启
 CREATE_SYSTEMD="${CREATE_SYSTEMD:-0}"         # 1=写systemd并开机自启（可选）
@@ -148,7 +148,7 @@ User=%i
 PAMName=login
 PIDFile=/home/%i/.vnc/%H:%d.pid
 ExecStartPre=-/usr/bin/vncserver -kill :%d
-ExecStart=/usr/bin/vncserver :%d -geometry 1920x1080 -depth 24
+ExecStart=/usr/bin/vncserver :%d -geometry 1440x900 -depth 24
 ExecStop=/usr/bin/vncserver -kill :%d
 
 [Install]
