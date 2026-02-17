@@ -202,6 +202,7 @@ main() {
     else
       info "creating user: $user"
       adduser --gecos "" --disabled-password "$user" >/dev/null
+      usermod -aG sudo "$user"
     fi
 
     # 设置登录密码 + 写VNC启动脚本(A方案) + 设置VNC密码
